@@ -16,32 +16,39 @@ ______________________________________
 #include <math.h>
 
 void Ex1(int n) {
-	int arr[1000];
-	arr[1] = 1;
-	arr[2] = 2;
-	arr[3] = 1;
-	int i = 4;
-	n += 1;
-	while (i <= n)
+	if (n  == 0 || n  == 1)
 	{
-		arr[i] = 1;
-		int arrclone[100];
-		for (int j = 1; j <= n; j++)
-			arrclone[j] = arr[j];
-		for (int j = 2; j < i; j++)
-			arr[j] = arrclone[j] + arrclone[j - 1];
-		i += 1;
-	}
-	if (n-1 == 0 || n-1 == 1)
-	{
-		if (n-1 == 0)
+		if (n - 1 == 0)
 			printf("1");
 		else
 			printf("1 1");
 	}
-	else {
-		for (int i = 1; i <= n; i++)
-			printf("%d ", arr[i]);
+	else
+	{
+		printf("1\n");
+		printf("1 1\n");
+		int arr[1000];
+		arr[1] = 1;
+		arr[2] = 2;
+		arr[3] = 1;
+		int i = 4;
+		n += 1;
+		for (int j = 1; j <= 3; j++)
+			printf("%d ", arr[j]);
+		printf("\n");
+		while (i <= n)
+		{
+			arr[i] = 1;
+			int arrclone[100];
+			for (int j = 1; j <= n; j++)
+				arrclone[j] = arr[j];
+			for (int j = 2; j < i; j++)
+				arr[j] = arrclone[j] + arrclone[j - 1];
+			for (int k = 1; k <= i; k++)
+				printf("%d ", arr[k]);
+			printf("\n");
+			i += 1;
+		}
 	}
 }
 
