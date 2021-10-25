@@ -53,9 +53,6 @@ void Ex2(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
-	for (int i = 0; i < m; i++)
-		for (int j = 0; j < n; j++)
-			cin >> a[i][j];
 	for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m - 1; j++)
 				for (int k = j + 1; k < m; k++)

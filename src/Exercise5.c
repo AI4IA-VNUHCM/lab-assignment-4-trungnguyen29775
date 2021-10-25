@@ -48,7 +48,7 @@ void Ex5(int arr[], int m, int n){
 		if (max < min)
 			max = min;
 	}
-	cout << max;
+	printf("%d", max);
 }
 
 int main(int argc, char *argv[]) {
