@@ -49,22 +49,64 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 
 void insertRow(int arr[], int a[SIZE][SIZE],int rowIndex, int m, int n){
 	//Your codes here
+	for (int i = m; i > rowIndex; i--)
+		for (int j = 0; j < n; j++)
+			a[i][j] = a[i - 1][j];
+	for (int i = 0; i < n; i++)
+		a[rowIndex][i] = arr[i];
+		for (int i = 0; i <= m; i++)
+		for (int j = 0; j < n; j++)
+		{
+			printf("%d ",a[i][j]);
+			if (j == n - 1)
+				printf("\n");
+		}
 	
 }
 
 void removeRow(int a[SIZE][SIZE], int rowIndex, int m, int n){
 	//Your codes here
-	
+	for (int i = rowIndex; i < m - 1; i++)
+		for (int j = 0; j < n; j++)
+			a[i][j] = a[i + 1][j];
+	for (int i = 0; i < m-1; i++)
+		for (int j = 0; j < n; j++)
+		{
+			printf("%d ",a[i][j]);
+			if (j == n - 1)
+				printf("\n");
+		}
 }
 
 void insertCol(int arr[], int a[SIZE][SIZE],int colIndex, int m, int n){
 	//Your codes here
+		for (int i = 0; i < m; i++)
+		for (int j = n; j > colIndex; j--)
+			a[i][j] = a[i][j-1];
+	for (int i = 0; i < m; i++)
+		a[i][colIndex] = arr[i];
+	for (int i = 0; i < m; i++)
+		for (int j = 0; j <= n; j++)
+		{
+			printf("%d ", a[i][j]);
+			if (j == n )
+				printf("\n");
+		}
 	
 }
 
 void removeCol(int a[SIZE][SIZE], int colIndex, int m, int n){
 	//Your codes here
-	
+	for (int i = 0; i < m ; i++)
+		for (int j = colIndex; j < n-1; j++)
+			a[i][j] = a[i][j+1];
+	for (int i = 0; i < m ; i++)
+		for (int j = 0; j < n-1; j++)
+		{
+			printf("%d ", a[i][j]);
+			if (j == n - 2)
+				printf("\n");
+		}
 }
 
 int main(int argc, char *argv[]) {
