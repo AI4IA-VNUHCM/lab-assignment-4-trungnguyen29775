@@ -25,8 +25,8 @@ void Ex1(int n) {
 	}
 	else
 	{
-		printf("1\n");
-		printf("1 1\n");
+		printf("1 \n");
+		printf("1 1 \n");
 		int arr[1000];
 		arr[1] = 1;
 		arr[2] = 2;
@@ -46,7 +46,6 @@ void Ex1(int n) {
 				arr[j] = arrclone[j] + arrclone[j - 1];
 			for (int k = 1; k <= i; k++)
 				printf("%d ", arr[k]);
-		if(i<n)
 				printf("\n");
 			i += 1;
 		}
