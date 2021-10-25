@@ -36,8 +36,19 @@ void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 void Ex5(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
-	//Your codes here
-
+	int max = 0;
+	for (int i = 0; i < m; i++)
+	{
+		int min = a[i][0];
+		for (int j = 0; j < n; j++)
+		{
+			if (min > a[i][j])
+				min = a[i][j];
+		}
+		if (max < min)
+			max = min;
+	}
+	cout << max;
 }
 
 int main(int argc, char *argv[]) {
