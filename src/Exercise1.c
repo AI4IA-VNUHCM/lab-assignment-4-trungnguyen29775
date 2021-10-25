@@ -46,7 +46,8 @@ void Ex1(int n) {
 				arr[j] = arrclone[j] + arrclone[j - 1];
 			for (int k = 1; k <= i; k++)
 				printf("%d ", arr[k]);
-			printf("\n");
+		if(i<n)
+				printf("\n");
 			i += 1;
 		}
 	}
